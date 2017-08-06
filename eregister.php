@@ -5,7 +5,21 @@
 <head>
   <title>user register</title>
   <link rel="stylesheet" type="text/css" href="estyle.css">
-</head>
+  
+  <!--copy -->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    
+    <!-- Load jQuery JS -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <!-- Load jQuery UI Main JS  -->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+    <!-- Load SCRIPT.JS which will create datepicker for input field  -->
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="runnable.css" />
+    
+    </head>
 
 
 <body>
@@ -13,7 +27,30 @@
         <h2>Register</h2>
     </div>
 
-    <form method="post" action="eregister.php"  enctype="multipart/form-data">
+    <script>
+      $(document).ready(function(){
+      $("#contact-form").on("submit", function(e){
+        e.preventDefault();
+    dataString = jQuery('form#contact-form').serialize();
+    jQuery.ajax({
+        type: "POST",
+        url: "eregister.php",
+        data: dataString,
+        success:  function(data)
+        {   $( '#contact-form' ).each(function()
+            {this.reset();});
+        alert('Form successfully submitted.')
+        },
+        error:  function(data)
+        { 
+            alert('Form not submitted.')
+        }
+    }); 
+});
+});
+</script>
+
+    <form method="post" id="contact-form" enctype="multipart/form-data">
    
      <!-- error messages -->
      <?php
@@ -36,6 +73,12 @@
           <input type="email" name="email_1" required>
        </div>
       
+       <div class="input-group3">
+          <label >DOB</label>
+          <input type="text" id="datepicker" name="dob" placeholder="mm/dd/yyyy" required>
+       </div>
+ 
+
      <div class="input-group3">
       <label >Department <br></label>
       
@@ -86,10 +129,11 @@
       <!-- register button -->
 
        <div class="input-group3">
-          <button type="submit" name="register" class="btn" onclick="loadDoc()">Register</button>   
+          <button type="submit" name="submit" class="btn" onclick="loadDoc()">Register</button>   
      </div>
  </div>
 </form>
           
 </body>
+
 </html>
