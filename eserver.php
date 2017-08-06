@@ -17,13 +17,14 @@ $errors=array();
 $db = mysqli_connect('localhost','root','','ecell');
 
 //registration
-   if(isset($_POST['register'])){
+   if(isset($_POST['submit'])){
   
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $phone = mysqli_real_escape_string($db, $_POST['phone_1']);
     $email = mysqli_real_escape_string($db, $_POST['email_1']);
     $dept = mysqli_real_escape_string($db, $_POST['dept']);
     $year = mysqli_real_escape_string($db, $_POST['year']);
+    $dob = mysqli_real_escape_string($db, $_POST['dob']);
 
    include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
    
@@ -51,12 +52,11 @@ else {
  $filename=basename( $_FILES["resume"]["name"]);    
 
  if(empty($errors)) {
-    $sql ="INSERT INTO users (name,phone,email,dept,year,filename) VALUES ('$username','$phone','$email','$dept','$year','$filename')";
+    $sql ="INSERT INTO users (name,phone,email,dept,year,filename,dob) VALUES ('$username','$phone','$email','$dept','$year','$filename','$dob')";
     mysqli_query($db,$sql);
-    ?>
-    <p style="color:green;">Registered Successfully</p>
-  <?php
-    }
+   ?>
+  <!-- <p style="color:green;">Registered Successfully</p> -->
+  <?php  }
   }
   
 ?>
