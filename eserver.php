@@ -37,22 +37,21 @@ $db = mysqli_connect('localhost','root','','ecell');
   exit;
 }
  
-//upload files
-$filename = $_FILES['resume']['name'];
-$tmpname = $_FILES['resume']['tmp_name'];
-$fp = fopen($tmpname,'r');
-$content = fread($fp,filesize($tmpname)); 
-$filecon = addslashes($content);
-fclose($fp);
-if(!get_magic_quotes_gpc())
-{
-  $filename=addslashes($filename);
-}
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["resume"]["name"]);
 
-//adding records
+if (move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["resume"]["name"]). " has been uploaded.";
+        }                    
+    
+else {
+        echo "Sorry, there was an error uploading your file.";
+     }
+
+ $filename=basename( $_FILES["resume"]["name"]);    
 
  if(empty($errors)) {
-    $sql ="INSERT INTO users (name,phone,email,dept,year,filename,filecon) VALUES ('$username','$phone','$email','$dept','$year','$filename','$filecon')";
+    $sql ="INSERT INTO users (name,phone,email,dept,year,filename) VALUES ('$username','$phone','$email','$dept','$year','$filename')";
     mysqli_query($db,$sql);
     ?>
     <p style="color:green;">Registered Successfully</p>
