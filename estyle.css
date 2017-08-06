@@ -1,0 +1,223 @@
+*
+{
+ margin: 0px;
+ padding: 0px;
+}
+
+ body
+{
+ font-size: 120%;
+ background-image: url('http://www198.lunapic.com/do-not-link-here-use-hosting-instead/150200518434645?323968');
+ background-repeat:no-repeat;
+ background-size: cover;
+ background-position: center;
+
+}
+
+.reads{
+	position:absolute;
+	margin-left:300px;
+	margin-top:8px;
+
+}
+
+.header
+{
+ width: 90%;
+ height: 30%
+ margin: 50px auto 0px;
+ color:white;
+ background: #F6B645;
+ text-align:center;
+ border: 1px solid #B0C4DE;
+ border-bottom:none;
+ margin-left: 3.4%;
+ border-radius: 10px 10px 0px 0px;
+ padding: 20px;
+}
+
+.header1
+{
+ width: 30%;
+ height: 30%
+ margin: 50px auto 0px;
+ color:white;
+ background: #DF7C0D;
+ text-align:center;
+/* border: 1px solid #B0C4DE; */
+ border-bottom:none;
+ margin-left: 30%;
+ border-radius: 10px 10px 0px 0px;
+ padding: 20px;
+}
+
+.formm
+{
+ width: 30%;
+ height: 5%;
+ margin: 10px 0px 0px 455px ;
+ padding: 20px;
+ border: 0px solid #B0C4DE;
+ background: none;
+ border-radius: 0px 0px 10px 10px;
+}
+
+/* for login and register*/
+ .input-group3
+{
+ margin: 10px 0px 10px 0px;
+}
+
+.input-group3 label
+{font-family: "Comic Sans MS", "Comic Sans", cursive;
+ display: block;
+ text-align: left;
+ margin: 3px;
+ font-size: 17px;
+ font-weight: bold;
+}
+
+.input-group3 input
+{
+ margin-left:0px;
+ height: 30px;
+ width: 98%;
+ padding: 5px 10px;
+ font-size: 22px;
+ border-radius: 5px;
+ border: 1px solid gray;
+ background-color: #FEFAF1;
+}
+
+ .input-group4
+{
+ margin: 10px 0px 10px 0px;
+}
+
+.input-group4 label
+{font-family: "Comic Sans MS", "Comic Sans", cursive;
+ display: block;
+ text-align: left;
+ margin: 3px;
+ font-size: 17px;
+ font-weight: bold;
+}
+
+.input-group4 input
+{font-family: "Comic Sans MS", "Comic Sans", cursive;
+ margin-left:0px;
+ height: 30px;
+ width: 98%;
+ padding: 5px 10px;
+ font-size: 18px;
+ border-radius: 5px;
+ border: 0px solid gray;
+ background-color: #FEFAF1;
+}
+
+option{
+background-color: #FEFAF1;
+
+}
+
+/*for others*/
+.input-group
+{display:flex;
+ margin: 10px 0px 10px 10px;
+ padding: 5px 10px;
+ }
+
+.input-group label
+{display:block;
+ text-align: left;
+ margin: 3px;
+ }
+
+.input-group input
+{height: 250px;
+ width: 75%;
+ padding: 5px 10px;
+ font-size: 16px;
+ border-radius: 5px;
+ border: 1px solid gray;
+ }
+
+.input-group1 input
+{height: 30px;
+ width: 22%;
+ padding: 5px 10px;
+ font-size: 16px;
+ border-radius: 5px;
+ margin-left: 15px;
+ border: 1px solid gray;
+ }
+
+.input-group2 input
+{height: 400px;
+ width: 75%;
+ padding: 5px 10px;
+ font-size: 16px;
+ border-radius: 5px;
+ margin-left: 15px;
+ border: 1px solid gray;
+ }
+
+.btn
+{
+ padding: 15px;
+ font-size: 18px;
+ color: white;
+ background: #DF7C0D;
+ border: none;
+ border-radius: 5px;
+ margin-left: 200px;
+ }
+
+.first{
+	width: 45%;
+	float: left;
+	}
+
+
+.error
+{
+ width: 92%;
+ margin: 0px auto;
+ padding: 10px;
+ border: 1px solid #a94442;
+ color: #a94442;
+ background: #f2dede;
+ border-radius: 5px;
+ text-align: left;	
+}
+
+.success{
+	/*position: absolute;
+	*/
+	color:#3c763d;
+	background: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-top: 5px;
+}
+
+
+.body{
+
+	display:block;
+	position:absolute;
+	margin-top:490px;
+	margin-left:40px;
+}
+
+.refer{
+	background-color: #78C2B0;
+	width:93.1%;
+	height:60px;
+	margin-left: 3.4%;
+}
+
+.sty
+  {color: #E65100;
+   font-weight: bold;
+   font-size: 20px; 
+  }
