@@ -25,6 +25,8 @@ $db = mysqli_connect('localhost','root','','ecell');
     $dept = mysqli_real_escape_string($db, $_POST['dept']);
     $year = mysqli_real_escape_string($db, $_POST['year']);
     $dob = mysqli_real_escape_string($db, $_POST['dob']);
+    $event = mysqli_real_escape_string($db, $_POST['event']);
+
 
    include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
    
@@ -52,7 +54,7 @@ else {
  $filename=basename( $_FILES["resume"]["name"]);    
 
  if(empty($errors)) {
-    $sql ="INSERT INTO users (name,phone,email,dept,year,filename,dob) VALUES ('$username','$phone','$email','$dept','$year','$filename','$dob')";
+    $sql ="INSERT INTO users (name,phone,email,dept,year,filename,dob,events) VALUES ('$username','$phone','$email','$dept','$year','$filename','$dob','$event')";
     mysqli_query($db,$sql);
    ?>
   <!-- <p style="color:green;">Registered Successfully</p> -->
