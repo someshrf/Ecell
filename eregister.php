@@ -17,6 +17,10 @@
     <!-- Load SCRIPT.JS which will create datepicker for input field  -->
     <script src="script.js"></script>
 
+   <!--sockets-->
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <script src="main.js"></script> 
+
     <link rel="stylesheet" href="runnable.css" />
     
     </head>
@@ -113,6 +117,20 @@
       </select>
     </div>
     
+     <div class="input-group3">
+
+      <label>Favorite Event <br></label>
+      
+      <select name="event" class="input-group3" required>
+        <optgroup label="event">
+         <option disabled selected value style="display: none">-- select an option --</option>
+         <option value="Ventura">Ventura</option>
+         <option value="Esummit">Esummit</option>
+         <option value="Conclave">Conclave</option>
+        </optgroup> 
+      </select>
+    </div>
+    
      <div class ="input-group4">
        <label> Upload Resume <br></label>
         <input type="file" name="resume" required>
@@ -132,8 +150,24 @@
           <button type="submit" name="submit" class="btn" onclick="loadDoc()">Register</button>   
      </div>
  </div>
+ <ul class="list_registered"></ul>
 </form>
           
+<script src="/ecell/socket_client.js"></script>
+<script>
+  var socket = io('localhost:3000');
+  console.log(socket) ;
+  document.querySelector('.btn').onclick = function(){
+    socket.emit('registered',{data:document.getElementById('user').value}) ;
+    console.log(document.getElementById('user').value) ;
+  }
+  socket.on('registered_fs', function(datta){
+    var list_registered = document.querySelector('.list_registered') ;
+    list_registered.innerHTML += '<li>'+datta.data+' registered'+'</li>'
+    console.log(datta)
+  })
+</script>
 </body>
 
 </html>
+     
