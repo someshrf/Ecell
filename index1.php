@@ -6,7 +6,7 @@ if(empty($_SESSION['username'])) {
   header('location: login.php');
   } 
 ?>
-<!--attempting git-->
+<!--attempting merge conflict-->
 <!DOCTYPE html>
 <html>
 <head>
