@@ -44,7 +44,7 @@ if(empty($_SESSION['username'])) {
             </div>
            
             <div class="input-group">
-            <button type="submit" name="addnote" class="btn">add note</button>
+            <button type="submit" name="addnote" class="btn">add notes for memory</button>
             </div>
             
             <!-- for delete notes-->
